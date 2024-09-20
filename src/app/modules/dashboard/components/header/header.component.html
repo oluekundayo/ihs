@@ -1,0 +1,27 @@
+ <!-- Header -->
+ <header class="mb-4 flex flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between">
+    <div class="inline-block">
+      <div class="space-x-1 text-xs font-medium text-muted-foreground">
+        <!-- <a href="" class="hover:text-primary">Hi Andrei,</a> -->
+      </div>
+      <h3 class="font-semibold text-foreground">{{title()}}</h3>
+    </div>
+    <div class="inline-block space-x-4">
+      <div class="flex items-center space-x-4">
+        <div class="relative">
+          <input type="text" placeholder="Search" class="w-64 rounded-lg border py-2 px-8 text-sm" (change)="searchInput($event)" />
+
+          <svg-icon
+          (click)="onSearch()"
+            [src]="'assets/icons/search-icon.svg'"
+            [svgClass]="'w-3 h-3 absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 transform text-gray-400'"></svg-icon>
+        </div>
+        <div class="flex items-center justify-center rounded-full bg-white p-2">
+          <button class="text-gray-400 hover:text-gray-600">
+            <svg-icon [src]="'assets/icons/bell-icon.svg'" [svgClass]="'w-5 h-5'"></svg-icon>
+          </button>
+        </div>
+        <img src="assets/images/Avatar.png" alt="User Avatar" class="h-10 w-10 rounded-full" />
+      </div>
+    </div>
+  </header>

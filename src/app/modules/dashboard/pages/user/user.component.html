@@ -1,216 +1,164 @@
 <main class="mx-auto px-4 py-4 sm:px-8 lg:container">
-    <!-- Header -->
-    <header class="mb-4 flex flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between">
-      <div class="inline-block">
-        <div class="space-x-1 text-xs font-medium text-muted-foreground">
-          <a href="" class="hover:text-primary">Hi Andrei,</a>
+ <app-header [title]="'E-way bills'" (search)="searchContent($event)"></app-header>
+  <!-- end Header -->
+  <div class="">
+    <div class="scrolling flex w-full space-x-5 py-6">
+      <!-- Card 1 -->
+      <div class="flex w-1/4 items-center justify-between space-x-5 rounded-lg bg-white p-4 shadow-md">
+        <div class="rounded-full bg-[#EBE8E8] p-2">
+          <svg-icon [src]="'assets/icons/box-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
         </div>
-        <h3 class="font-semibold text-foreground">User Management</h3>
-      </div>
-      <div class="inline-block space-x-4">
-        <div class="flex items-center space-x-4">
-          <div class="relative">
-            <input type="text" placeholder="Search" class="w-64 rounded-lg border py-2 px-8 text-sm" />
-  
-            <svg-icon
-              [src]="'assets/icons/search-icon.svg'"
-              [svgClass]="'w-3 h-3 absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 transform text-gray-400'"></svg-icon>
+        <div>
+          <h2 class="text-sm font-medium text-gray-500">Total no of E-Way Bills</h2>
+          <div class="flex items-baseline space-x-2">
+            <p class="text-2xl font-semibold text-gray-900">71,897</p>
           </div>
-          <div class="flex items-center justify-center rounded-full bg-white p-2">
-            <button class="text-gray-400 hover:text-gray-600">
-              <svg-icon [src]="'assets/icons/bell-icon.svg'" [svgClass]="'w-5 h-5'"></svg-icon>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="flex w-1/4 items-center justify-between space-x-5 rounded-lg bg-white p-4 shadow-md">
+        <div class="rounded-full bg-[#EBE8E8] p-2">
+          <svg-icon [src]="'assets/icons/box-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
+        </div>
+        <div>
+          <h2 class="text-sm font-medium text-gray-500">Total no of Loading Way Bills</h2>
+          <div class="flex items-baseline space-x-2">
+            <p class="text-2xl font-semibold text-gray-900">7,897</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="flex w-1/4 items-center justify-between space-x-5 rounded-lg bg-white p-4 shadow-md">
+        <div class="rounded-full bg-[#EBE8E8] p-2">
+          <svg-icon [src]="'assets/icons/box-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
+        </div>
+        <div>
+          <h2 class="text-sm font-medium text-gray-500">Total no of Dispensing Way Bills</h2>
+          <div class="flex items-baseline space-x-2">
+            <p class="text-2xl font-semibold text-gray-900">71,897</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="space-y-4 rounded-lg bg-white p-4 shadow-md">
+      <div class="container mx-auto p-4">
+        <div class="mb-4 flex items-center justify-between">
+          <div>
+            <button
+              class="border-b-1 border border-solid border-transparent border-b-primary bg-white px-4 py-2 text-sm text-primary">
+              Loading Waybill
             </button>
           </div>
-          <img src="assets/images/Avatar.png" alt="User Avatar" class="h-10 w-10 rounded-full" />
-        </div>
-      </div>
-    </header>
-    <!-- end Header -->
-    <div class="">
-      <div class="scrolling flex w-full space-x-5 py-6">
-        <!-- Card 1 -->
-        <div class="flex w-1/4 items-center justify-between space-x-5 rounded-lg bg-white p-4 shadow-md">
-          <div class="rounded-md bg-green-100 p-2">
-            <svg-icon [src]="'assets/icons/card-create-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-          </div>
-          <div>
-            <h2 class="text-sm font-medium text-gray-500">User Created</h2>
-            <div class="flex items-baseline space-x-2">
-              <p class="text-2xl font-semibold text-gray-900">71,897</p>
-              <span class="flex font-medium text-green-500">
-                <svg-icon [src]="'assets/icons/arrow-green-up.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                <small>122</small>
-              </span>
-            </div>
+          <div class="flex space-x-4">
+            <button class="flex flex-row items-center gap-1 rounded-md border bg-white px-2 py-2">
+              <svg-icon [src]="'assets/icons/calendar-black-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
+              <span class="text-xs">Filter</span>
+            </button>
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="flex w-1/4 items-center justify-between space-x-5 rounded-lg bg-white p-4 shadow-md">
-          <div class="rounded-md bg-green-100 p-2">
-            <svg-icon [src]="'assets/icons/card-verify-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-          </div>
-          <div>
-            <h2 class="text-sm font-medium text-gray-500">Orders Validated</h2>
-            <div class="flex items-baseline space-x-2">
-              <p class="text-2xl font-semibold text-gray-900">7,897</p>
-              <span class="flex font-medium text-green-500">
-                <svg-icon [src]="'assets/icons/arrow-green-up.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                <small>122</small>
-              </span>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="flex w-1/4 items-center justify-between space-x-5 rounded-lg bg-white p-4 shadow-md">
-          <div class="rounded-md bg-green-100 p-2">
-            <svg-icon [src]="'assets/icons/truck-fast.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-          </div>
-          <div>
-            <h2 class="text-sm font-medium text-gray-500">Total Trucks Available</h2>
-            <div class="flex items-baseline space-x-2">
-              <p class="text-2xl font-semibold text-gray-900">71,897</p>
-              <span class="flex font-medium text-green-500">
-                <svg-icon [src]="'assets/icons/arrow-green-up.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                <small>122</small>
-              </span>
-            </div>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="flex w-1/4 items-center justify-between space-x-5 rounded-lg bg-white p-4 shadow-md">
-          <div class="rounded-md bg-green-100 p-2">
-            <svg-icon [src]="'assets/icons/box-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-          </div>
-          <div>
-            <h2 class="text-sm font-medium text-gray-500">Total Trucks in Transit</h2>
-            <div class="flex items-baseline space-x-2">
-              <p class="text-2xl font-semibold text-gray-900">71,897</p>
-              <span class="flex font-medium text-green-500">
-                <svg-icon [src]="'assets/icons/arrow-green-up.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                <small>122</small>
-              </span>
+        <div class="overflow-x-auto">
+          <table class="in-w-full min-w-full border bg-white leading-normal">
+            <thead>
+              <tr class="bg-gray-100 text-xs uppercase">
+                <th class="py-3 px-6 text-left"><input type="checkbox" /></th>
+                <th class="py-3 px-6 text-left">Loading Details</th>
+                <th class="py-3 px-6 text-left">Truck details</th>
+                <th class="py-3 px-6 text-right">Capacity</th>
+                <th class="py-3 px-6 text-left">Status</th>
+                <th class="py-3 px-6 text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm text-gray-600">
+              <tr class="border-b border-gray-200 hover:bg-gray-100">
+                <td class="py-3 px-6 text-left"><input type="checkbox" /></td>
+                <td class="py-3 px-6 text-left">
+                  <div class="flex items-center">
+                    <div class="rounded-md bg-green-100 p-2">
+                      <svg-icon [src]="'assets/icons/in-drop-oil.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
+                    </div>
+                    <div class="ml-3">
+                      <p class="font-semibold text-black">Load112</p>
+                      <!-- <p class="text-sm text-gray-400">12/05/2024</p> -->
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3 px-6 text-left">
+                  <div class="flex items-center">
+                    <div class="rounded-md bg-green-100 p-2">
+                      <svg-icon [src]="'assets/icons/card-truck-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
+                    </div>
+                    <div class="ml-3">
+                      <p class="font-semibold text-black">Truck CR2034</p>
+                      <p class="text-sm text-gray-400">Plate XRTWST</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3 px-6 text-right">30,000 Litres</td>
+                <td class="py-3 px-6 text-left">
+                  <span class="rounded-full bg-[#D1FAE5] py-1 px-2 text-xs text-[#004448]">Delivered</span>
+                </td>
+                <td class="py-3 px-6 text-center">
+                  <div class="item-center flex justify-center">
+                    <div class="mr-2 w-4 transform hover:scale-110 hover:text-purple-500">
+                      <svg-icon [src]="'assets/icons/horizontal.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <!-- Repeat the table row for each order as needed -->
+              <tr class="border-b border-gray-200 hover:bg-gray-100">
+                <td class="py-3 px-6 text-left"><input type="checkbox" /></td>
+                <td class="py-3 px-6 text-left">
+                  <div class="flex items-center">
+                    <div class="rounded-md bg-green-100 p-2">
+                      <svg-icon [src]="'assets/icons/in-drop-oil.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
+                    </div>
+                    <div class="ml-3">
+                      <p class="font-semibold text-black">Load112</p>
+                      <!-- <p class="text-sm text-gray-400">12/05/2024</p> -->
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3 px-6 text-left">
+                  <div class="flex items-center">
+                    <div class="rounded-md bg-green-100 p-2">
+                      <svg-icon [src]="'assets/icons/card-truck-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
+                    </div>
+                    <div class="ml-3">
+                      <p class="font-semibold text-black">Truck CR2034</p>
+                      <p class="text-sm text-gray-400">Plate XRTWST</p>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3 px-6 text-right">30,000 Litres</td>
+                <td class="py-3 px-6 text-left">
+                  <span class="rounded-full bg-[#D1FAE5] py-1 px-2 text-xs text-[#004448]">Delivered</span>
+                </td>
+                <td class="py-3 px-6 text-center">
+                  <div class="item-center flex justify-center">
+                    <div class="mr-2 w-4 transform hover:scale-110 hover:text-purple-500">
+                      <svg-icon [src]="'assets/icons/horizontal.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <!-- Add more rows as necessary -->
+            </tbody>
+          </table>
+          <div class="mt-4 flex items-center justify-between">
+            <div class="text-sm text-gray-600">Showing 1 to 10 of 50 entries</div>
+            <div class="flex space-x-2">
+              <button class="rounded border py-1 px-3 text-gray-600">1</button>
+              <button class="rounded border bg-green-600 py-1 px-3 text-white">2</button>
+              <button class="rounded border py-1 px-3 text-gray-600">3</button>
+              <button class="rounded border py-1 px-3 text-gray-600">4</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
-    <section>
-      <div class="space-y-4 rounded-lg bg-white p-4 shadow-md">
-        <div class="container mx-auto p-4">
-          <div class="mb-4 flex items-center justify-between">
-            <div>
-              <button
-                class="border-b-1 border border-solid border-transparent border-b-primary bg-white px-4 py-2 text-sm text-primary">
-                All Orders (71,897)
-              </button>
-            </div>
-            <div class="flex space-x-4">
-              <div class="flex flex-row items-center gap-1">
-                <input
-                  type="text"
-                  placeholder="Search for orders, drivers etc"
-                  class="w-80 rounded-md border py-2 px-4" />
-                <button class="rounded-md border bg-black p-2">
-                  <svg-icon [src]="'assets/icons/search-white-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                </button>
-              </div>
-  
-              <button class="flex flex-row items-center gap-1 rounded-md border bg-white px-2 py-0">
-                <svg-icon [src]="'assets/icons/calendar-black-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                <span class="text-xs">Filter</span>
-              </button>
-              <button class="flex flex-row items-center gap-1 rounded-md border bg-white px-2 py-0">
-                <svg-icon [src]="'assets/icons/filter-square.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                <span class="text-xs">Sort by</span>
-              </button>
-              <button class="rounded-md bg-primary px-4 py-2 text-white">+ Create Order</button>
-            </div>
-          </div>
-          <div class="overflow-x-auto">
-            <table class="in-w-full min-w-full border bg-white leading-normal">
-              <thead>
-                <tr class="bg-gray-100 text-xs uppercase">
-                  <th class="py-3 px-6 text-left"><input type="checkbox" /></th>
-                  <th class="py-3 px-6 text-left">Order Details</th>
-                  <th class="py-3 px-6 text-left">Driver</th>
-                  <th class="py-3 px-6 text-right">Stock Qty</th>
-                  <th class="py-3 px-6 text-left">Destination</th>
-                  <th class="py-3 px-6 text-left">Status</th>
-                  <th class="py-3 px-6 text-center">Actions</th>
-                </tr>
-              </thead>
-              <tbody class="text-sm text-gray-600">
-                <tr class="border-b border-gray-200 hover:bg-gray-100">
-                  <td class="py-3 px-6 text-left"><input type="checkbox" /></td>
-                  <td class="py-3 px-6 text-left">
-                    <div class="flex items-center">
-                      <div class="rounded-md bg-green-100 p-2">
-                        <svg-icon [src]="'assets/icons/card-create-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                      </div>
-                      <div class="ml-3">
-                        <p class="font-semibold text-black">Order112</p>
-                        <p class="text-sm text-gray-400">12/05/2024</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="py-3 px-6 text-left">Adewale Ramon</td>
-                  <td class="py-3 px-6 text-right">7,897</td>
-                  <td class="py-3 px-6 text-left">Regional Headquarters Ikeja<br />From VI</td>
-                  <td class="py-3 px-6 text-left">
-                    <span class="rounded-full bg-blue-200 py-1 px-3 text-xs text-blue-600">Created</span>
-                  </td>
-                  <td class="py-3 px-6 text-center">
-                    <div class="item-center flex justify-center">
-                      <div class="mr-2 w-4 transform hover:scale-110 hover:text-purple-500">
-                        <svg-icon [src]="'assets/icons/horizontal.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <!-- Repeat the table row for each order as needed -->
-                <tr class="border-b border-gray-200 hover:bg-gray-100">
-                  <td class="py-3 px-6 text-left"><input type="checkbox" /></td>
-                  <td class="py-3 px-6 text-left">
-                    <div class="flex items-center">
-                      <div class="rounded-md bg-green-100 p-2">
-                        <svg-icon [src]="'assets/icons/card-create-icon.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                      </div>
-                      <div class="ml-3">
-                        <p class="font-semibold text-black">Order112</p>
-                        <p class="text-sm text-gray-400">12/05/2024</p>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="py-3 px-6 text-left">Adewale Ramon</td>
-                  <td class="py-3 px-6 text-right">7,897</td>
-                  <td class="py-3 px-6 text-left">Regional Headquarters Ikeja<br />From VI</td>
-                  <td class="py-3 px-6 text-left">
-                    <span class="rounded-full bg-green-200 py-1 px-3 text-xs text-green-600">Validated</span>
-                  </td>
-                  <td class="py-3 px-6 text-center">
-                    <div class="item-center flex justify-center">
-                      <div class="mr-2 w-4 transform hover:scale-110 hover:text-purple-500">
-                        <svg-icon [src]="'assets/icons/horizontal.svg'" [svgClass]="'h-4 w-4'"></svg-icon>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <!-- Add more rows as necessary -->
-              </tbody>
-            </table>
-            <div class="mt-4 flex items-center justify-between">
-              <div class="text-sm text-gray-600">Showing 1 to 10 of 50 entries</div>
-              <div class="flex space-x-2">
-                <button class="rounded border py-1 px-3 text-gray-600">1</button>
-                <button class="rounded border bg-green-600 py-1 px-3 text-white">2</button>
-                <button class="rounded border py-1 px-3 text-gray-600">3</button>
-                <button class="rounded border py-1 px-3 text-gray-600">4</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  
+  </section>
+</main>

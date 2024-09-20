@@ -36,7 +36,7 @@ export class Menu {
         {
           icon: 'assets/icons/stock-icon.svg',
           label: 'Registry',
-          route: '/base/dashboard/stock',
+          route: '/base/dashboard/registry',
           // children: [
           //   { label: 'Nfts', route: '/base/dashboard/nfts' },
           //   // { label: 'Podcast', route: '/dashboard/podcast' },
@@ -54,7 +54,7 @@ export class Menu {
         {
           icon: 'assets/icons/heroicons/outline/lock-closed.svg',
           label: 'Profile',
-          route: '/auth',
+          route: '/base/dashboard/profile',
         //   children: [
         //     { label: 'Sign up', route: '/auth/sign-up' },
         //     { label: 'Sign in', route: '/auth/sign-in' },
@@ -78,15 +78,15 @@ export class Menu {
       group: '',
       separator: false,
       items: [
-        {
-          icon: 'assets/icons/heroicons/outline/download.svg',
-          label: 'Help',
-          route: '/download',
-        },
+        // {
+        //   icon: 'assets/icons/heroicons/outline/download.svg',
+        //   label: 'Help',
+        //   route: '/#',
+        // },
         {
           icon: 'assets/icons/heroicons/outline/gift.svg',
           label: 'Logout',
-          route: '/gift',
+          route: '/auth',
         },
         // {
         //   icon: 'assets/icons/heroicons/outline/users.svg',

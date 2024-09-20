@@ -6,6 +6,7 @@ import { OrderComponent } from './pages/order/order.component';
 import { FleetComponent } from './pages/fleet/fleet.component';
 import { StockComponent } from './pages/stock/stock.component';
 import { UserComponent } from './pages/user/user.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -16,8 +17,9 @@ const routes: Routes = [
       { path: 'overview', component: NftComponent },
       { path: 'order', component: OrderComponent },
       { path: 'fleet', component: FleetComponent },
-      { path: 'stock', component: StockComponent },
+      { path: 'registry', component: StockComponent },
       { path: 'user', component: UserComponent },
+      { path: 'profile', component: ProfileComponent },
       { path: '**', redirectTo: 'errors/404' },
     ],
   },
